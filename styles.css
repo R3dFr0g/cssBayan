@@ -1,0 +1,358 @@
+/* desktop */
+@media(min-width: 1101px){
+    body{
+        background-color: rgb(36, 35, 35);
+        /* min-height: 100vh; */
+    }
+    
+    
+    /* bayan */
+    .bayanWrapper {
+        height: 100%;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(93, 98, 98);
+        color: blue;
+    }
+    
+    h1{ 
+        color: black;
+        display: block;
+        position: relative;
+        top:0.4em;
+        /* 12px; */
+    }
+    /* no content by default exept chosen one */
+    .bayanContent {
+        display: none;
+    }
+    .bayanWrapper:hover{
+        color: black;
+    }
+    .bayanWrapper:hover .icon {
+        rotate: -45deg;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right:0.3em;/*  10px; */
+        transform: translateY(-50%);
+    }
+    .bayanItem:hover .bayanContent{
+        display: block;
+    }
+    /* for saving color on chosen item while hover */
+    input:checked + label {
+        color: black;
+      }
+      /* show img when choose radio button */
+      input:checked ~ .bayanContent {
+        display: block;
+      }
+    .bayanItem:has(input:checked) .icon{
+        rotate: 0deg;
+        position: absolute;
+        right: 0.6em; /* 16px; */
+        top: 50%;
+        transform: translateY(-50%);
+        /* height: 100px; */
+      }
+
+      .bayanContent:active .memImage{
+       border: 4px solid black;
+      }
+    
+    .itemTitle {
+    position: relative;
+    font-size: 2em;
+     font-weight: bold;
+     padding: 0.3em 0em;
+     display: block;
+     cursor: pointer;
+     border-top: 0.01em solid white;
+    }
+    .bayanInput{
+        /* hide radio buttons*/
+        appearance: none; 
+        height: 0;
+        width: 0;
+        display: inline;
+        /* position: absolute; */
+    }
+    .bayanContent {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .memImage{
+        /* height: 50%; */
+        width: 30em;
+        height: 30em;
+        display: block;
+        margin: 0 auto; 
+        
+        animation-name: Appearance;
+        animation-duration: 1s;
+        animation-timing-function:linear;
+    }
+    
+    .icon   {
+        /* transform: rotate(180deg); */
+        position: absolute;
+        /* right: 10px; */
+        top: 50%;
+        transform: translateY(-50%);
+        height: 0.9em;
+        width: 0.9em;
+        display: none;
+        transition: all 0.3s ;
+    }
+    .bayanContent:hover{
+        cursor: pointer;
+    }
+    @keyframes Appearance {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+
+
+  @keyframes slide-fwd-center {
+    0% {
+              transform: translateZ(0);
+    }
+    100% {
+              transform: translateZ(160px);
+    }
+  }
+  
+}
+  
+/* mobile 320x568, tablet 820x1180, desktop 1920×1080; */
+/* mobile  */
+@media(max-width: 568px){
+    body{
+        background-color: rgb(93, 132, 87);
+    }
+    /* bayan */
+    .bayanWrapper {
+        height: 100%;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(93, 98, 98);
+        color: blue;
+    }
+    
+    h1{ 
+        color: black;
+        display: block;
+        position: relative;
+        top:0.4em;
+        font-size: 1.8em;
+        /* 12px; */
+    }
+    /* no content by default exept chosen one */
+    .bayanContent {
+        display: none;
+    }
+    .bayanWrapper:hover{
+        color: black;
+    }
+    .bayanWrapper:hover .icon {
+        rotate: -45deg;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right:0.3em;/*  10px; */
+        transform: translateY(-50%);
+    }
+    .bayanItem:hover .bayanContent{
+        display: block;
+    }
+    .bayanContent:active .memImage{
+        border: 4px solid black;
+       }
+     
+    /* for saving color on chosen item while hover */
+    input:checked + label {
+        color: black;
+      }
+      /* show img when choose radio button */
+      input:checked ~ .bayanContent {
+        display: block;
+      }
+    .bayanItem:has(input:checked) .icon{
+        rotate: 0deg;
+        position: absolute;
+        right: 0.6em; /* 16px; */
+        top: 50%;
+        transform: translateY(-50%);
+        
+        /* height: 100px; */
+      }
+    
+    .itemTitle {
+    position: relative;
+    font-size: 1em;
+     font-weight: bold;
+     padding: 0.3em 0em;
+     display: block;
+     cursor: pointer;
+     border-top: 0.01em solid white;
+    }
+    .bayanInput{
+        /* hide radio buttons*/
+        appearance: none; 
+        height: 0;
+        width: 0;
+        display: inline;
+        /* position: absolute; */
+    }
+    .bayanContent {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .memImage{
+        /* height: 50%; */
+        width: 15em;
+        height: 15em;
+        display: block;
+        margin: 0 auto; 
+        animation-name: Appearance;
+        animation-duration: 1s;
+        animation-timing-function:linear;
+    }
+    
+    .icon   {
+        position: absolute;
+        /* right: 10px; */
+        top: 50%;
+        transform: translateY(-50%);
+        height: 0.9em;
+        width: 0.9em;
+        display: none;
+        transition: all 0.3s ;
+    }
+    .bayanContent:hover{
+        cursor: pointer;
+    }
+    @keyframes Appearance {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+}
+
+/* tablet */
+@media (max-width: 1100px) and (min-width: 569px)  {
+    body{
+        background-color: rgb(88, 74, 76);
+    }
+    /* bayan */
+    .bayanWrapper {
+        height: 100%;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(93, 98, 98);
+        color: blue;
+    }
+    
+    h1{ 
+        color: black;
+        display: block;
+        position: relative;
+        top:0.4em;
+        font-size: 2em;
+        /* 12px; */
+    }
+    /* no content by default exept chosen one */
+    .bayanContent {
+        display: none;
+    }
+    .bayanWrapper:hover{
+        color: black;
+    }
+    .bayanWrapper:hover .icon {
+        rotate: -45deg;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right:0.3em;/*  10px; */
+        transform: translateY(-50%);
+    }
+    .bayanItem:hover .bayanContent{
+        display: block;
+    }
+    .bayanContent:active .memImage{
+        border: 4px solid black;
+       }
+     
+    /* for saving color on chosen item while hover */
+    input:checked + label {
+        color: black;
+      }
+      /* show img when choose radio button */
+      input:checked ~ .bayanContent {
+        display: block;
+      }
+    .bayanItem:has(input:checked) .icon{
+        rotate: 0deg;
+        position: absolute;
+        right: 0.6em; /* 16px; */
+        top: 50%;
+        transform: translateY(-50%);
+        /* height: 100px; */
+      }
+    
+    .itemTitle {
+    position: relative;
+    font-size: 1.5em;
+     font-weight: bold;
+     padding: 0.3em 0em;
+     display: block;
+     cursor: pointer;
+     border-top: 0.01em solid white;
+    }
+    .bayanInput{
+        /* hide radio buttons*/
+        appearance: none; 
+        height: 0;
+        width: 0;
+        display: inline;
+        /* position: absolute; */
+    }
+    .bayanContent {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    .memImage{
+        /* height: 50%; */
+        width: 20em;
+        height: 20em;
+        display: block;
+        margin: 0 auto; 
+        animation-name: Appearance;
+        animation-duration: 1s;
+        animation-timing-function:linear;
+    }
+    
+    .icon   {
+        position: absolute;
+        /* right: 10px; */
+        top: 50%;
+        transform: translateY(-50%);
+        height: 0.9em;
+        width: 0.9em;
+        display: none;
+        transition: all 0.3s ;
+    }
+    .bayanContent:hover{
+        cursor: pointer;
+    }
+    @keyframes Appearance {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+      }
+}
